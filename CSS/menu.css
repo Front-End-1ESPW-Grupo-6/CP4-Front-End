@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    background-color: #681f37;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    max-width: 100vh;
+    min-width: 100vh;
+  }
+
+.logo{
+    order: 1;
+    width:15%;
+    align-items: center;
+}
