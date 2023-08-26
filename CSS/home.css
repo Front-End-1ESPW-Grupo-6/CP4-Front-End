@@ -13,11 +13,17 @@ body {
     color: white;
     font-family: "Montserrat", sans-serif;
 }
+.backgroundImg{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
 .Welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 22%;
+    padding-top: 10%;
 }
 
 .logo {
@@ -25,12 +31,21 @@ body {
 }
 
 .TextWelcome {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
+}
+.txtLegal{
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
     padding: 1em;
 }
-
-.btn1 {
+.btnDiv{
+    display: flex;
+    padding: 0.5em;
+    gap: 2em;
+}
+.btnDiv a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -40,8 +55,35 @@ body {
     border-radius: 50px;
 }
 
-.btn1:hover {
+.btnDiv a:hover {
     background-color: white;
     color: #681f37;
     transition: 0.3s;
+}
+
+.btnDiv a:active {
+    background-color: rgb(224, 224, 224);
+    box-shadow: 1px 1px 1px #300d18;
+    transition: 0.3s;
+}
+
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.footer img{
+    width: 6em;
+}
+.Galo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.Galo img{
+    padding-left: 10px;
 }
