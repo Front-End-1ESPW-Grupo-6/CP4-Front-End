@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,62 @@
     <link rel="stylesheet" href="../CSS/menu.css">
     <script src="../JavaScript/menu.js" defer></script>
 </head>
+
 <body>
-    <div>
-        <header class="navBar">
+    <header class="navBar">
 
-            <button onclick="toggleMenu()" class="burger material-symbols-outlined">
-                <img src="../imgs/burguer.png" class="burgerImg">
-            </button>
+        <button onclick="toggleMenu()" class="burger material-symbols-outlined">
+            <img src="../imgs/burguer.png" class="burgerImg">
+        </button>
 
-            <nav class="sideBar">
-                <div class="logo">
-                    <img src="../imgs/Logo vinicola galo.png" alt="">
-                    <span>Galo</span>
-                </div>
-                <div>
-                    <ul>
-                        <li><a>aaaa</a></li>
-                        <li><a>aaaa</a></li>
-                        <li><a>aaaa</a></li>
-                        <li><a>aaaa</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    </div>
+        <nav class="sideBar">
+            <div class="logo">
+                <img src="../imgs/Logo vinicola galo.png" alt="">
+                <span>Galo</span>
+            </div>
+            <div>
+                <ul class="navAnchor">
+                    <li><a>home</a></li>
+                    <li><a>home</a></li>
+                    <li><a>Produtos</a></li>
+                    <li><a>Contato</a></li>
+                    <li><a>home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mainPage">
+            <img src="../imgs/random.jpg">
+        </div>
+        <div class="mostWanted">
+            <div class="secndPage">
+                <h1>Mais buscados</h1>
+                    <div class="mWines">
+                        <figure class="mWine"><img src="../imgs/vinho.png">
+                            <span class="mwName">Nome</span>
+                            <span class="mwDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet.
+                            </span>
+                            <span class="mwPrice">999,99</span>
+                        </figure>
+                        <figure class="mWine"><img src="../imgs/vinho.png">
+                            <span class="mwName">Nome</span>
+                            <span class="mwDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet.
+                            </span>
+                            <span class="mwPrice">999,99</span>
+                        </figure>
+                        <figure class="mWine"><img src="../imgs/vinho.png">
+                            <span class="mwName">Nome</span>
+                            <span class="mwDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet.
+                            </span>
+                            <span class="mwPrice">999,99</span>
+                        </figure>
+                    </div>
+            </div>
+        </div>
+        <div class="aboutUs">
+        </div>
+    </main>
 </body>
+
 </html>

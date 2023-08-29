@@ -26,11 +26,11 @@ body {
 }
 
 .logo {
-    width: 17em;
+    width: 20%;
 }
 
 .TextWelcome {
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 .txtLegal{
@@ -84,5 +84,15 @@ body {
     text-align: center;
 }
 .Galo img{
+    width: 4.5em;
     padding-left: 10px;
+}
+
+@media screen and (min-width: 1300px){
+    .logo{
+        width: 15%;
+    }
+    .Welcome{
+        padding-top: 5%;
+    }
 }

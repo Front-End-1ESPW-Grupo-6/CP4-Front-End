@@ -76,6 +76,9 @@ body {
   font-size: 18px;
   color: #606468;
 }
+.navAnchor{
+  list-style: none;
+}
 /* Side bar se torna Nav bar */
 @media screen and (min-width: 600px){
     .sideBar{
@@ -95,3 +98,45 @@ body {
 }
 
 /* Fim Nav Bar */
+
+/* Inicio Main Page */
+.mainPage{
+  background-color: white;
+  padding: 1em 0;
+}
+.mainPage img{
+  width: 100%;
+  box-shadow: 1px 1px 1px black;
+}
+
+/* Fim Main page */
+/* Inicio Vinhos mais procurados */
+.secndPage{
+  text-align: center;
+  background-color: aqua
+}
+
+.secndPage h1{
+}
+.mWines{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.mWines img{
+  width: 8em;
+}
+.mWine{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em 1em;
+  border: 1px solid black;
+}
+.mwName{
+}
+.mwDesc{
+}
+.mwPrice{
+}
+/* Fim Vinhos mais procurados */
