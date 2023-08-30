@@ -76,8 +76,10 @@ body {
   font-size: 18px;
   color: #606468;
 }
-.navAnchor{
-  list-style: none;
+
+.navAnchor a{
+  text-decoration: none;
+  color: black;
 }
 /* Side bar se torna Nav bar */
 @media screen and (min-width: 600px){
@@ -94,6 +96,10 @@ body {
     }
     .burger{
       visibility: hidden;
+    }
+    .navAnchor li{
+      display: inline-block;
+      padding-right: 2em;
     }
 }
 

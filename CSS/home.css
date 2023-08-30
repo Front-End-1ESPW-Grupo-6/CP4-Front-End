@@ -8,10 +8,19 @@
 }
 
 body {
-    background-color: #681f37;
     color: white;
     font-family: "Montserrat", sans-serif;
+    background: #681f37 url(../imgs/Sem\ Título-1.png) no-repeat center;
+    /* background-size: cover; */
 }
+
+@media screen and (min-width: 600px){
+    body{
+        background: #681f37 url(../imgs/Sem\ Título-1.png) no-repeat center;
+        background-size: cover;
+    }
+}
+
 .backgroundImg{
     position: fixed;
     z-index: -1;
