@@ -113,3 +113,62 @@ body {
 }
 
 /* Fim Nav Bar */
+.titulo-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.titulo{
+    background-color: #8a0000;
+    width: 100%;
+    height: 30em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-container img{
+    width: 40%;
+    position: absolute;
+    top: 0;
+    padding-top: 15em;
+}
+
+.titulo a{
+    font-size: 7vh;
+    color: #ffffff;
+    padding-bottom: 2em;
+}
+
+@media screen and (max-width: 600px){
+    .titulo-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .titulo{
+        background-color: #8a0000;
+        width: 100%;
+        height: 14em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .titulo-container img{
+        width: 70%;
+        position: absolute;
+        top: 0;
+        padding-top: 8.5em;
+    }
+    
+    .titulo a{
+        font-size: 7vh;
+        color: #ffffff;
+        padding-bottom: 2em;
+    }
+}
