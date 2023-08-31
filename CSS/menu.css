@@ -107,7 +107,7 @@ body {
 
 /* Inicio Main Page */
 .mainPage{
-  background-color: white;
+  background-color: rgb(243, 240, 240);
   padding: 1em 0;
 }
 .mainPage img{
@@ -119,7 +119,7 @@ body {
 /* Inicio Vinhos mais procurados */
 .secndPage{
   text-align: center;
-  background-color: rgb(0, 252, 252)
+  background-color: rgb(238, 238, 238)
 }
 
 .secndPage h1{
@@ -128,49 +128,115 @@ body {
 
 .mWines{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   gap: 20px;
-  padding: 3%;
+  justify-content: space-around;
+  padding: 2em;
 }
 .mWines img{
-  width: 50%;
+  max-width: 8em;
 }
 .mWine{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em 1em;
-  width: 25%;
   border: 1px solid black;
-  background-color: #dfdfdf;
+  background-color: transparent;
+  border-radius: 20px;
 }
-
 .mwName{
+  font-weight: bold;
+  font-size: 1.3em;
 }
 .mwDesc{
+  padding: 0.5em 1em;
+  font-size: 0.9em;
 }
 .mwPrice{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+@media screen and (min-width: 600px) {
+  .mWines{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 2em;
+  }
+  .mWines img{
+    max-width: 8em;
+  }
+  .mWine{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 20px;
+    max-width: 20%;
+    max-height: 20%;
+  }
+  .mwName{
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  .mwDesc{
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+  .mwPrice{
+    font-size: 1.1em;
+    font-weight: bold;
+  }
 }
 /* Fim Vinhos mais procurados */
 
 .aboutUs{
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
   justify-content: center;
-  padding: 5%;
-  background-color: rgb(0, 255, 191);
+  text-align: center;
+  background-color: rgb(247, 247, 247);
 }
-
-.imgGaloSB img{
-  width: 60%;
+#imgGaloSB1{
+  width: 160px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+#imgGaloSB2{
+  width: 160px;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .txtSB{
-  padding-right: %;
+  padding-top: 2em;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .footer{
   display: flex;
-  background-color: #17181a;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+.footer img{
+  width: 6em;
+}
+.Galo{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.Galo img{
+  width: 4.5em;
+  padding-left: 10px;
 }
 
 #preloader{
