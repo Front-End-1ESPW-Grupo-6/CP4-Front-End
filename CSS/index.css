@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    background: #681f37 url(../imgs/Foto\ home\ cell.jpg) no-repeat;
+    /* background-size: cover; */
+}
+
+@media screen and (min-width: 600px){
+    body{
+        background: #681f37 url(../imgs/Foto\ home\ pc.jpg) no-repeat;
+        background-size: cover;
+    }
+}
+
+.backgroundImg{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.Welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.logo {
+    width: 20%;
+}
+
+.TextWelcome {
+    font-size: 2em;
+    font-weight: bold;
+}
+.txtLegal{
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 1em;
+}
+.btnDiv{
+    display: flex;
+    padding: 0.5em;
+    gap: 2em;
+}
+.btnDiv a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    box-shadow: 1px 3px 10px #000000;
+    padding: 1em 2em;
+    border-radius: 50px;
+}
+
+.btnDiv a:hover {
+    background-color: white;
+    color: #681f37;
+    transition: 0.3s;
+}
+
+.btnDiv a:active {
+    background-color: rgb(224, 224, 224);
+    box-shadow: 1px 1px 1px #000000;
+    transition: 0.3s;
+}
+
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.footer img{
+    width: 6em;
+}
+.Galo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.Galo img{
+    width: 4.5em;
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 1300px){
+    .logo{
+        width: 15%;
+    }
+    .Welcome{
+        padding-top: 5%;
+    }
+}
+
+#preloader{
+    background: #300d18 url(../imgs/Wine.gif) no-repeat center center;
+    background-size: 7%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}

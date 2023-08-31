@@ -1,116 +1,477 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    background: #681f37 url(../imgs/Sem\ Título-1.png) no-repeat center;
-    /* background-size: cover; */
+  background: #e6edf2;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (min-width: 600px){
-    body{
-        background: #681f37 url(../imgs/Sem\ Título-1.png) no-repeat center;
-        background-size: cover;
-    }
+/* Inicio Nav Bar */
+.navBar {
+  position: fixed;
+  z-index: 2;
+  display: flex;
 }
 
-.backgroundImg{
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
+.navBar button {
+  border: 0;
+  padding: 1em;
+  background: transparent;
+  color: #585c62;
+  cursor: pointer;
 }
-.Welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10%;
+
+.burger {
+  z-index: 3;
+}
+
+.burgerImg {
+  width: 3em;
+}
+
+
+.sideBar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1em 2em 0;
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  transition-property: translate, opacity, visibility;
+  transition-duration: 0.5s;
+  translate: -100% 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.open .sideBar {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
 }
 
 .logo {
-    width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 108px;
+  padding-left: 2em;
+  padding-bottom: 1em;
 }
 
-.TextWelcome {
-    font-size: 2em;
-    font-weight: bold;
-}
-.txtLegal{
-    font-size: 1em;
-    font-weight: 400;
-    text-align: center;
-    padding: 1em;
-}
-.btnDiv{
-    display: flex;
-    padding: 0.5em;
-    gap: 2em;
-}
-.btnDiv a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border: 1px solid white;
-    box-shadow: 1px 3px 10px #300d18;
-    padding: 1em 2em;
-    border-radius: 50px;
+.logo img {
+  width: 32px;
 }
 
-.btnDiv a:hover {
-    background-color: white;
-    color: #681f37;
-    transition: 0.3s;
+.logo span {
+  font-size: 18px;
+  color: #606468;
 }
 
-.btnDiv a:active {
-    background-color: rgb(224, 224, 224);
-    box-shadow: 1px 1px 1px #300d18;
-    transition: 0.3s;
+.navAnchor {
+  list-style: none;
+  font-size: 1.5em;
 }
 
-.footer{
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.navAnchor li {
+  padding-bottom: 1em;
+}
+
+.navAnchor a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Side bar se torna Nav bar */
+@media screen and (min-width: 600px) {
+  .sideBar {
+    translate: 0 0;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    background-color: black;
-}
-.footer img{
-    width: 6em;
-}
-.Galo{
+    width: 100%;
+    height: 72px;
+    padding: 1em;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .burger {
+    visibility: hidden;
+  }
+
+  .logo {
     display: flex;
     align-items: center;
+    gap: 8px;
+    width: 108px;
+    padding: 0;
+  }
+  .navAnchor {
+    list-style: none;
+    font-size: 1em;
+  }
+
+  .navAnchor li {
+    display: inline-block;
+    padding-right: 2em;
+    padding-bottom: 0;
+  }
+  .navAnchor li :hover {
+    color: #571329;
+  }
+}
+
+/* Fim Nav Bar */
+
+/* Inicio Main Page */
+.mainPage {
+  position: relative;
+  background-color: rgb(243, 240, 240);
+  padding: 1em 0;
+}
+
+.mainPage img {
+  width: 100%;
+}
+
+.mainTxt {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 600px) {
+  .mainTxt {
+    position: absolute;
     text-align: center;
-}
-.Galo img{
-    width: 4.5em;
-    padding-left: 10px;
-}
-
-@media screen and (min-width: 1300px){
-    .logo{
-        width: 15%;
-    }
-    .Welcome{
-        padding-top: 5%;
-    }
+    color: rgb(243, 240, 240);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
-#preloader{
-    background: #300d18 url(../imgs/Wine.gif) no-repeat center center;
-    background-size: 7%;
-    height: 100vh;
+/* Fim Main page */
+/* Inicio Vinhos mais procurados */
+.secndPage {
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+}
+
+.secndPage h1 {
+  padding-top: 2em;
+}
+
+.underlineMW {
+  height: 0px;
+  width: 40%;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid #e9b340;
+}
+
+.mWines {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 2em;
+  cursor: pointer;
+}
+
+.mWines :hover {
+  box-shadow: 1px 1px 4px rgb(122, 122, 122)
+}
+
+.mWine:hover img,
+.mwName:hover,
+.mwDesc:hover,
+.mwPrice:hover {
+  box-shadow: none;
+}
+
+.mWines img {
+  width: 10em;
+  height: 10em;
+}
+
+.mWine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 20px;
+  padding-top: 0.5em;
+  text-decoration: none;
+  color: black;
+}
+
+.mwName {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-top: 0.5em;
+}
+
+.mwDesc {
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+}
+
+.mwPrice {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+@media screen and (min-width: 600px) {
+  .underlineMW {
+    height: 0px;
+    width: 10%;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #e9b340;
+  }
+
+  .mWines {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 2em 7em 3em 7em;
+  }
+
+  .mWines img {
+    max-width: 8em;
+  }
+
+  .mWine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 20px;
+    max-width: 20%;
+    max-height: 20%;
+    text-decoration: none;
+    color: black;
+  }
+
+  .mwName {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .mwDesc {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+
+  .mwPrice {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+}
+
+/* Fim Vinhos mais procurados */
+/* Inicio Sobre nos */
+
+.aboutUs {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  justify-items: center;
+  text-align: center;
+  background-color: rgb(247, 247, 247);
+  padding-top: 2em;
+  align-items: center;
+}
+
+#imgGaloSB1 {
+  width: 100%;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  padding-left: 1em;
+}
+
+#imgGaloSB2 {
+  width: 100%;
+  grid-column: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  padding-right: 1em;
+}
+
+.h1About {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  padding-bottom: 0.5em;
+}
+
+.underlineSobre {
+  height: 0px;
+  width: 50%;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid #e9b340;
+}
+
+.txtSB {
+  padding: 2em 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.btnSaiba {
+  background-color: #D9D9D9;
+  padding: 1em;
+  text-decoration: none;
+  color: #757373;
+  border-radius: 50px;
+  transition-duration: 0.4s;
+  margin-left: 6.5;
+  grid-row: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.btnSaiba:hover {
+  background: #571329;
+  box-shadow: 0px 2px 10px 5px #97B1BF;
+  color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  #imgGaloSB1 {
     width: 100%;
-    position: fixed;
-    z-index: 100;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding-left: 20%;
+  }
+
+  #imgGaloSB2 {
+    width: 100%;
+    grid-column: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    padding-right: 20%;
+  }
+
+  .txtSB {
+    padding: 2em 15%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+/* Fim sobre nos */
+/* inicio loja redirect */
+.redirectStore {
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+.redirectStore h1 {
+  margin-bottom: 0.2em;
+}
+
+.redirectStore p {
+  margin-bottom: 0.2em;
+}
+
+.redirectStore a {
+  background-color: #D9D9D9;
+  margin: auto;
+  padding: 1em;
+  text-decoration: none;
+  color: #757373;
+  border-radius: 50px;
+  transition-duration: 0.4s;
+}
+
+.redirectStore a:hover {
+  background: #571329;
+  box-shadow: 0px 2px 10px 5px #97B1BF;
+  color: #fff;
+}
+
+.underlineStore {
+  height: 0px;
+  width: 40%;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid #e9b340;
+}
+
+@media screen and (min-width: 600px) {
+  .underlineStore {
+    height: 0px;
+    width: 30%;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #e9b340;
+  }
+}
+
+/* fim loja redirect */
+.footer {
+  display: flex;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.footer img {
+  width: 6em;
+}
+
+.Galo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.Galo img {
+  width: 4.5em;
+  padding-left: 10px;
+}
+
+#preloader {
+  background: #300d18 url(../imgs/Wine.gif) no-repeat center center;
+  background-size: 7%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
