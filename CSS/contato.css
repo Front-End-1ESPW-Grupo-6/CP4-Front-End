@@ -43,11 +43,9 @@ body {
   height: 100%;
   padding: 1em 2em 0;
   display: flex;
-  gap: 0.5em;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
-  background: #fff;
+  background: white;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
   transition-property: translate, opacity, visibility;
   transition-duration: 0.5s;
@@ -67,6 +65,8 @@ body {
   align-items: center;
   gap: 8px;
   width: 108px;
+  padding-left: 2em;
+  padding-bottom: 1em;
 }
 
 .logo img {
@@ -76,6 +76,15 @@ body {
 .logo span {
   font-size: 18px;
   color: #606468;
+}
+
+.navAnchor {
+  list-style: none;
+  font-size: 1.5em;
+}
+
+.navAnchor li {
+  padding-bottom: 1em;
 }
 
 .navAnchor a {
@@ -101,13 +110,202 @@ body {
     visibility: hidden;
   }
 
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 108px;
+    padding: 0;
+  }
+  .navAnchor {
+    list-style: none;
+    font-size: 1em;
+  }
+
   .navAnchor li {
     display: inline-block;
-    padding-right: 2em;
+    padding-bottom: 0;
+    padding-left: 1em;
+  }
+  .navAnchor li :hover {
+    color: #571329;
   }
 }
 
+/* Login bar */
+.nav-links {
+  position: relative;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  transition: all 0.3s ease 0s;
+  color: #571329;
+}
+
+#login{
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 0;
+  color: #000000;
+}
+#login :hover{
+  color: #571329;
+}
+.loginBar {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  background-color: #eceaea;
+  left: 50%;
+  top: 2.5em;
+  width: 200px;
+  max-height: 0px; 
+  border-radius: 20px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  transform: translate(-50%);
+}
+
+.abreNav {
+  max-height: 240px;
+}
+
+.loginBar a {
+  font-weight: 400;
+}
+
+.loginBar a:hover {
+  transition: all 0.3s ease 0s;
+  color: #571329;
+}
+
+.innerLoginBar {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  padding-top: 1em;
+  padding-bottom: 4em;
+}
+
+.outerLoginBar {
+  padding-bottom: 1em;
+}
+
+.underline-loginBar {
+  height: 0px;
+  width: 100%;
+  margin-bottom: 0.5em;
+  border: 1px solid #000000;
+}
+
+.innerLoginBar a {
+  padding-bottom: 0.5em;
+}
+@media screen and (min-width: 600px){
+  .nav-links {
+    position: relative;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .nav-links li a:hover {
+    transition: all 0.3s ease 0s;
+    color: #571329;
+  }
+  
+  #login{
+    text-decoration: none;
+    font-size: 1em;
+    color: #000000;
+    padding-right: 2em;
+  }
+  #login :hover{
+    color: #571329;
+  }
+  .loginBar {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: #eceaea;
+    left: 40%;
+    top: 2.5em;
+    width: 200px;
+    max-height: 0px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    transform: translate(-50%);
+  }
+  
+  .abreNav {
+    max-height: 240px;
+  }
+  
+  .loginBar a {
+    font-weight: 400;
+  }
+  
+  .loginBar a:hover {
+    transition: all 0.3s ease 0s;
+    color: #571329;
+  }
+  
+  .innerLoginBar {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    padding-top: 1em;
+    padding-bottom: 4em;
+  }
+  
+  .outerLoginBar {
+    padding-bottom: 1em;
+  }
+  
+  .underline-loginBar {
+    height: 0px;
+    width: 100%;
+    margin-bottom: 0.5em;
+    border: 1px solid #000000;
+  }
+  
+  .innerLoginBar a {
+    padding-bottom: 0.5em;
+  }
+}
 /* Fim Nav Bar */
+
 
 /* inicio preload */
 #preloader {
@@ -121,5 +319,272 @@ body {
   /* fim preload */
 
   /* inicio mainpage */
+  .contact-container{
+    padding-top: 8em;
+    padding-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact-container img{
+    width: 45%;
+  }
+
+  .contact-title{
+    display: inline-block;
+    width: 40%;
+    height: 5em;
+    padding: 0;
+    margin: 0;  
+    text-align: center;
+  }
+
+  .contact-title p{
+    font-size: 2.5em;
+  }
+
+  .contact-form{
+    width: 20em;
+    display: inline-block ;
+    margin: 1em;
+    height: 28em;
+    border-style: solid;
+    border-radius: 7px;
+    border-width: 2px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px; /* Adjust the spacing as needed */
+  }
   
-  /* fim mainpage */
+  .contact-form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+/* inicio formulario */
+
+  input,
+span,
+label,
+textarea {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 1em;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+/* Question */
+
+input.question,
+textarea.question {
+  font-size: 4em;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+/* Underline and Placeholder */
+
+input.question + label,
+textarea.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 20%;
+  border-top: 1px solid rgb(0, 0, 0);
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.question:focus + label,
+textarea.question:focus + label {
+  width: 80%;
+}
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+textarea.question:valid,
+textarea.question:focus {
+  margin-top: 35px;
+}
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #333;
+}
+
+textarea.question:focus + label > span,
+textarea.question:valid + label > span {
+  top: -150px;
+  font-size: 22px;
+  color: #333;
+}
+
+input.question:valid + label,
+textarea.question:valid + label {
+  border-color: green;
+}
+
+input.question:invalid,
+textarea.question:invalid {
+  box-shadow: none;
+}
+
+input.question + label > span,
+textarea.question + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 1em;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  display: block;
+  opacity: 0;
+  margin: 5px 0 0 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #EEE;
+}
+
+input[type="submit"]:active {
+  background: #999;
+}
+
+input.question:valid ~ input[type="submit"], textarea.question:valid ~ input[type="submit"] {
+  -webkit-animation: appear 1s forwards;
+  animation: appear 1s forwards;
+}
+
+input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input[type="submit"] {
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* fim formulario */
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.btn {
+  background-color: #D9D9D9;
+  padding: 1em;
+  text-decoration: none;
+  color: #757373;
+  border-radius: 50px;
+  transition-duration: 0.4s;
+  margin-left: 6.5;
+  grid-row: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  bottom: 0;
+}
+
+.btn:hover {
+  background: #571329;
+  box-shadow: 0px 2px 10px 5px #97B1BF;
+  color: #fff;
+}
+
+
+/* Responsividade para cell */
+@media screen and (max-width: 600px) {
+  .contact-container{
+    padding-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-container img{
+    width: 80%;
+  }
+
+  .contact-title{
+    display:  inline-block;
+    width: 100%;
+    height: 5em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-title p{
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .contact-form{
+    max-width: 100%;
+    display: inline-block ;
+    height: 30em;
+    border-style: solid;
+    border-radius: 7px;
+    border-width: 2px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px; /* Adjust the spacing as needed */
+  }
+  
+  .contact-form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  
+}

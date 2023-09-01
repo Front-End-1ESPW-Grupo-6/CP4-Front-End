@@ -31,11 +31,50 @@
                     <li><a href="../HTML/loja.html">Catalogo</a></li>
                     <li><a href="../HTML/sobre.html">Sobre nós</a></li>
                     <li><a href="../HTML/contato.html">Contato</a></li>
-                    <li><a href="../HTML/login.html">Login</a></li>
                 </ul>
             </div>
+            <ul class="nav-links">
+                <li><a id="login" href="./login.html">Login</a></li>
+                <div class="loginBar" id="loginBar">
+                    <div class="innerLoginBar">
+                        <a href="./index.html">Pagina Inicial</a>
+                    </div>
+                    <div class="underline-loginBar"></div>
+                    <div class="outerLoginBar">
+                        <a id="desconect" href="javascript:void(0);" id="loginBar">Desconectar</a></li>
+                    </div>
+                </div>
+            </ul>
         </nav>
     </header>
     <main>
-    
+        <div class="contact-container">
+            <img id="imgGaloSB1" src="../imgs/Contato-img.jpg" alt="">
+            <div class="contact-title">
+                <p>Contate-nos</p>
+                <div class="contact-form">
+                    <!-- <label>
+                        <input placeholder="Nome Completo">
+                    </label>
+                    <label>
+                        <input placeholder="E-mail">
+                    </label>
+                    <label>
+                        <input placeholder="Sua mensagem">
+                    </label>
+                    <form> -->
+                    <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
+                    <label for="msg"><span>Nome Completo</span></label>
+                    <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
+                    <label for="nme"><span>E-mail</span></label>
+                    <textarea name="message" rows="2" class="question" id="msg" required autocomplete="off"></textarea>
+                    <label for="msg"><span>Mensagem</span></label>
+                    <input type="submit" value="Submit!" />
+                    </form>
+                    <div class="btn-container">
+                        <a class="btn" href="../HTML/contato.html">Enviar</a>
+                    </div>
+                </div>
+            </div>
+            </div>
     </main>

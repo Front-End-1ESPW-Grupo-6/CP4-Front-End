@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <div id="preloader"></div>
 
     <!-- Inicio Login -->
@@ -22,7 +22,7 @@
             <h1 class="loginTitle">Login</h1>
             <form class="loginForm">
                 <div class="loginAlert hide" id="loginAlert">Alerta!</div>
-                <span class="loginInputName">Email ou CNPJ</span>
+                <span class="loginInputName">Email</span>
                 <label for="email" class="loginInputs">
                     <input class="loginInput" type="text" name="email" id="loginBaseInput" placeholder="Nome@email.com">
                 </label>
@@ -37,7 +37,7 @@
                 <p>Nao possui uma conta?</br><span id="redirectSignup">Cadastre-se</span></p>
             </div>
             <div class="loginRedirectHome">
-                <a href="../HTML/menu.html">Voltar a página inicial</a>
+                <a href="../HTML/home.html">Voltar a página inicial</a>
             </div>
         </div>
         <!-- Fim Login -->
@@ -84,68 +84,10 @@
                 <p>Ja possui uma conta?</br><span id="redirectLogin">Faça login</span></p>
             </div>
             <div class="singupRedirectHome">
-                <a href="../HTML/menu.html">Voltar a página inicial</a>
+                <a href="../HTML/login.html">Voltar a página inicial</a>
             </div>
         </div>
         <!-- Fim Cadastro usuário -->
-
-        <!-- Inicio Cadastro ONG -->
-        <div class="signupOngContainer" id="signupOngContainer">
-            <h1 class="signupOngTitle">Cadastro</h1>
-            <form class="signupOngForm">
-                <div class="signupOngAlert hide" id="signupOngAlert">Alerta!</div>
-                <span class="signupOngInputName">Nome da ONG</span>
-                <label for="OngName" class="signupOngInputs">
-                    <input class="signupOngInput" type="text" name="OngName" id="name-OSignup-Input">
-                </label>
-                <span class="signupOngInputName">Nome do representante</span>
-                <label for="OngAgent" class="signupOngInputs">
-                    <input class="signupOngInput" type="text" name="OngAgent" id="agent-OSignup-Input">
-                </label>
-                <span class="signupOngInputName">Email</span>
-                <label for="OngEmail" class="signupOngInputs">
-                    <input class="signupOngInput" type="text" name="OngEmail" id="email-OSignup-Input"
-                        placeholder="Nome@email.com">
-                </label>
-                <span class="signupOngInputName">Numero de contato</span>
-                <label for="OngNumber" class="signupOngInputs">
-                    <input class="signupOngInput" type="text" name="OngNumber" id="number-OSignup-Input"
-                        placeholder="(00) 0000-0000">
-                </label>
-                <span class="signupOngInputName">CNPJ</span>
-                <label for="email" class="signupOngInputs">
-                    <input class="signupOngInput" type="text" name="email" id="cnpj-OSignup-Input"
-                        placeholder="XX. XXX. XXX/0001-XX.">
-                </label>
-                <span class="signupOngInputName">Endereço da sede</span>
-                <label for="OngAddress" class="signupOngInputs">
-                    <input class="signupOngInput" type="text" name="OngAddress" id="address-OSignup-Input">
-                </label>
-                <span class="signupOngInputName">Senha</span>
-                <label for="OngPass" class="signupOngInputs">
-                    <input class="signupOngInput" type="password" name="OngPass" id="pass-OSignup-Input">
-                    <img class="on" id="eyePassOngSignup" src="../imgs/olho-vermelho.png" alt="olho-aberto">
-                </label>
-                <span class="passMin">Deve conter no minimo 6 caracteres</span>
-                <span class="signupOngInputName">Senha</span>
-                <label for="OngPassConfirm" class="signupOngInputs">
-                    <input class="signupOngInput" type="password" name="OngPassConfirm" id="passConfirm-OSignup-Input">
-                    <img class="on" id="eyePassOngSignupConfirm" src="../imgs/olho-vermelho.png" alt="olho-aberto">
-                </label>
-                <span class="passMin">Senhas devem ser iguais</span>
-                <button class="signupOngSubmitBtn" id="signupOngSubmitBtn">Cadastrar</button>
-            </form>
-            <div class="redirectLoginOng">
-                <p>Já possui uma conta?</br><span id="redirectLoginOng">Faça login</span></p>
-            </div>
-            <div class="redirectSignup-Ong">
-                <p>Nao faz parte de uma ONG?</br><span id="redirectSignup-Ong">Cadastro de usuario</span></p>
-            </div>
-            <div class="ongRedirectHome">
-                <a href="../HTML/menu.html">Voltar a página inicial</a>
-            </div>
-        </div>
-        <!-- Fim Cadastro ONG -->
     </main>
 </body>
 
